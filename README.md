@@ -1,4 +1,4 @@
-# employee deployment link:https://employee-rkygojrallgdn42ly6pvbf.streamlit.app/  <---------- Do Check It
+# App link:https://employee-rkygojrallgdn42ly6pvbf.streamlit.app/  <---------- Do Check It
 
 # HR Attrition Prediction App
 
