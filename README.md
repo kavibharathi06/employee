@@ -1,178 +1,157 @@
-# App link:https://employee-rkygojrallgdn42ly6pvbf.streamlit.app/  <---------- Do Check It
+# HR Attrition Prediction using Logistic Regression
 
-# HR Attrition Prediction App
+## Project Overview
 
-A Machine Learning web application built using Streamlit that predicts whether an employee will leave the company based on employee-related factors.
+The HR Attrition Prediction App is a Machine Learning-based web application developed using Streamlit. The application predicts whether an employee is likely to leave the company based on employee-related parameters such as satisfaction level, evaluation score, working hours, and years of experience.
 
-The project uses Logistic Regression and provides interactive visualizations for HR analytics.
-
----
-
-# Technologies Used
-
-- Python
-- Streamlit
-- Pandas
-- NumPy
-- Matplotlib
-- Scikit-learn
-- Pickle
+This project focuses on employee retention analysis and demonstrates the use of Logistic Regression for classification problems in Human Resource Analytics.
 
 ---
 
-# Dataset
+## Objectives
 
-Dataset File:
-
-HR_comma_sep.csv
-
-Target Column:
-- left
-
-Where:
-- 0 = Employee Will Stay
-- 1 = Employee Will Leave
+* To predict employee attrition.
+* To analyze employee satisfaction and performance factors.
+* To understand classification algorithms in Machine Learning.
+* To develop an interactive HR analytics application.
 
 ---
 
-# Features
+## Technologies Used
 
-✔ Predict employee attrition
-
-✔ Shows probability of employee leaving
-
-✔ Displays model accuracy
-
-✔ Interactive user inputs
-
-✔ Scatter Plot visualization
-
-✔ Logistic Regression Curve visualization
+| Technology   | Purpose                   |
+| ------------ | ------------------------- |
+| Python       | Programming Language      |
+| Streamlit    | Web Application Framework |
+| Pandas       | Data Processing           |
+| NumPy        | Numerical Computation     |
+| Matplotlib   | Data Visualization        |
+| Scikit-learn | Machine Learning          |
+| Pickle       | Model Serialization       |
 
 ---
 
-# Project Structure
+## Dataset Information
 
-project_folder/
+The dataset contains employee information and attrition status.
+
+### Dataset Columns
+
+| Column Name          | Description                  |
+| -------------------- | ---------------------------- |
+| satisfaction_level   | Employee satisfaction score  |
+| last_evaluation      | Performance evaluation score |
+| number_project       | Number of projects handled   |
+| average_montly_hours | Monthly working hours        |
+| time_spend_company   | Years spent in company       |
+| left                 | Attrition status             |
+
+### Target Variable
+
+* 1 → Employee Will Leave
+* 0 → Employee Will Stay
+
+---
+
+## Machine Learning Model
+
+### Logistic Regression
+
+The project uses Logistic Regression for predicting employee attrition. The trained model is stored using Pickle and loaded during application runtime.
+
+---
+
+## Project Workflow
+
+1. Load employee dataset.
+2. Preprocess categorical variables using One-Hot Encoding.
+3. Load the trained Machine Learning model.
+4. Accept user inputs through Streamlit.
+5. Predict employee attrition.
+6. Display probability score and visualizations.
+
+---
+
+## Features
+
+* Employee attrition prediction.
+* Probability estimation.
+* Interactive user inputs.
+* Model accuracy display.
+* Scatter Plot visualization.
+* Logistic Regression Curve.
+
+---
+
+## Input Parameters
+
+The application accepts the following employee details:
+
+* Satisfaction Level
+* Last Evaluation
+* Number of Projects
+* Monthly Working Hours
+* Years in Company
+
+---
+
+## Data Visualizations
+
+### Scatter Plot
+
+Shows the relationship between employee satisfaction level and attrition.
+
+### Logistic Regression Curve
+
+Displays the probability of employee attrition based on satisfaction level.
+
+---
+
+## Model Evaluation
+
+The performance of the model is evaluated using the `accuracy_score()` function.
+
+---
+
+## Project Structure
+
+```bash
+HR_Attrition_Project/
 │
 ├── app.py
 ├── model.pkl
 ├── HR_comma_sep.csv
-└── README.md
+├── README.md
+└── requirements.txt
+```
 
 ---
 
-# Input Parameters
+## Installation
 
-The application takes the following employee details:
+### Install Required Libraries
 
-- Satisfaction Level
-- Last Evaluation
-- Number of Projects
-- Monthly Hours
-- Years in Company
-
----
-
-# Machine Learning Model
-
-## Logistic Regression
-
-Used for:
-- Employee attrition prediction
-- Binary classification
-
-The trained model is loaded using:
-
-pickle.load()
-
----
-
-# Installation
-
-## Step 1: Install Python
-
-Download Python:
-https://www.python.org/downloads/
-
----
-
-## Step 2: Install Required Libraries
-
-Run the following command:
-
+```bash
 pip install streamlit pandas numpy matplotlib scikit-learn
+```
 
----
+### Run the Application
 
-# Run the Application
-
-Open terminal inside the project folder and run:
-
+```bash
 streamlit run app.py
+```
 
 ---
 
-# Application Workflow
+## Future Enhancements
 
-1. User enters employee details
-2. Clicks Predict button
-3. Model predicts:
-   - Employee Will Stay
-   - Employee Will Leave
-4. Probability percentage is displayed
-5. Accuracy score is shown
-6. Graphs are visualized
+* Add more employee parameters.
+* Improve user interface design.
+* Deploy the application on cloud platforms.
+* Add advanced analytics dashboards.
 
 ---
 
-# Graphs Included
+## Conclusion
 
-## 1. Scatter Plot
-
-Displays:
-- Satisfaction Level vs Employee Leaving
-
----
-
-## 2. Logistic Regression Curve
-
-Displays:
-- Probability curve for employee attrition
-
----
-
-# Accuracy Calculation
-
-Accuracy is calculated using:
-
-accuracy_score()
-
----
-
-# Files Description
-
-## app.py
-Main Streamlit application file.
-
-## model.pkl
-Saved trained Logistic Regression model.
-
-## HR_comma_sep.csv
-Dataset used for training and testing.
-
----
-
-# Future Improvements
-
-- Add more HR parameters
-- Improve UI design
-- Add employee department selection
-- Deploy application online
-- Add feature importance graph
-
----
-
-# Author
-
-Developed using Python, Streamlit, and Machine Learning for HR Analytics practice.
+This project demonstrates the practical application of Machine Learning in HR Analytics. It helps in understanding employee attrition prediction using Logistic Regression and provides experience in building interactive Machine Learning applications using Streamlit.
